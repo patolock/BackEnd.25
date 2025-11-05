@@ -1,0 +1,57 @@
+PROCESO DE INSTALACION DEL PROYECTO DJANGO
+
+PASO A PASO
+
+1.- ✅ Descargar el archivo RAR
+--> Descarga el archivo .rar que se encuentra en este repositorio.
+
+2.- 📦 Extraer el archivo
+--> Extrae el contenido del archivo .rar.
+--> Esto generará una carpeta llamada EV3-ALLENDES.
+
+3.- 🖥️ Abrir la consola (CMD)
+--> Abre una ventana de CMD y navega hasta la ruta donde dejaste la carpeta EV3-ALLENDES.
+
+4.- 🔧 Activar el entorno virtual
+--> Una vez dentro de la carpeta, ejecuta:
+---> venv\Scripts\activate
+--> Cuando veas (venv) al inicio, significa que el entorno virtual está activo.
+
+5.- 📁 Ingresar al directorio del proyecto
+--> Ejecuta:
+---> cd tmm_site
+
+6.- 📝 Abrir el proyecto en Visual Studio Code
+--> Una vez dentro de EV3-ALLENDES\tmm_site, ejecuta:
+---> code .
+--> (Asegúrate de tener instalado Visual Studio Code).
+
+7.- 📥 Instalar dependencias necesarias
+--> En la consola de VS Code, ejecuta:
+---> pip install pymysql
+
+8.- 🔐 Configurar credenciales de base de datos
+--> Abre el archivo .env y revisa que las credenciales de la base de datos SQL coincidan con las de tu base local.
+--> Si es necesario, crea o modifica el nombre de la base.
+--> Revisa settings.py y ajusta credenciales para NoSQL (de preferencia MongoDB).
+
+9.- 🗂️ Realizar migraciones iniciales
+--> Ejecuta los siguientes comandos en orden:
+---> python manage.py makemigrations
+---> python manage.py migrate
+
+10.- 📚 Cargar datos iniciales
+--> Ejecuta:
+---> python manage.py loaddata initial_instructors.json initial_workshops.json initial_workshop_dates.json initial_enrollments.json
+
+11.- 🚀 Levantar el servidor
+--> Ejecuta:
+---> python manage.py runserver
+--> Si aparece un error de módulo faltante, instala lo que indique la consola:
+---> pip install nombre_del_modulo
+
+12.- ✅ Verificación final
+--> Una vez que el servidor esté corriendo correctamente, podrás acceder al prototipo del sitio web desde tu navegador.
+
+📩 En caso de dudas o inconvenientes, puedes contactarme al siguiente correo:
+--> patricio.allendes03@inacapmail.cl
